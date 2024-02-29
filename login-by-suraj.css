@@ -1,0 +1,155 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+body {
+    height: 100dvh;
+    width: 100dvw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+}
+
+main {
+    height: 70dvh;
+    width: 60dvw;
+    background-color: white;
+    display: flex;
+}
+
+/* class to be added to the main tag via JS */
+.main-class {
+    flex-direction: row-reverse;
+    border-radius: 2rem;
+
+    .left {
+        border-radius: 2rem;
+        border-top-left-radius: 50%;
+        border-bottom-left-radius: 50%;
+    }
+
+    .forgot-pass {
+        visibility: hidden;
+    }
+}
+
+.left {
+    height: 100%;
+    width: 50%;
+    padding: 2rem;
+    gap: 1.5rem;
+    background-color: blue;
+    text-align: center;
+}
+
+button {
+    width: 50%;
+}
+
+.left button:hover {
+    border: 0.1rem solid white;
+}
+
+.right {
+    height: 100%;
+    width: 50%;
+    padding: 2rem;
+}
+
+form {
+    width: 100%;
+}
+
+/* Aligning all inputs and buttons inside form in center */
+
+.left,
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+form input,
+button {
+    border: 0.1rem solid black;
+    border-radius: 0.5rem;
+    margin: 0.5rem;
+    padding: 0.5rem;
+}
+
+#name {
+    margin-top: 1rem;
+}
+
+input {
+    width: 95%;
+}
+
+i {
+    margin: 0.5rem;
+    color: blue;
+}
+
+h1,
+.logo,
+.right p {
+    margin: 0.5rem;
+}
+
+.right p {
+    font-size: 0.75rem;
+    margin: 0;
+}
+
+button {
+    margin-top: 1.3rem;
+    color: white;
+    background-color: blue;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    color: blue;
+}
+
+/* Curving the left and blue side */
+main {
+    border-radius: 2rem;
+}
+
+.left {
+    border-radius: 2rem;
+    border-top-right-radius: 50%;
+    border-bottom-right-radius: 50%;
+}
+
+/* Class to be added to the login button on whote side whemn clicked that runs animation of rotation */
+
+.login-class {
+    animation: anime 0.9s 1s infinite;
+}
+.input-rotate{
+
+    animation: anime 0.9s 5s infinite reverse;
+}
+.main-rotate {
+    animation: anime 0.9s 10s infinite reverse;
+}
+
+@keyframes anime {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
